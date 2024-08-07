@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+            $("#gencare").mouseenter(function () {
+                $("#press").slideDown("slow");
+                $("#gencare").mouseleave(function () {
+                    $("#press").slideUp("slow");
+                });
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            $("#dental").mouseenter(function () {
+                $("#nxt").slideDown("slow");
+                $("#dental").mouseleave(function () {
+                    $("#nxt").slideUp("slow");
+                });
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            $("#neuro").mouseenter(function () {
+                $("#mid").slideDown("slow");
+                $("#neuro").mouseleave(function () {
+                    $("#mid").slideUp("slow");
+                });
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            $("#diabetes").mouseenter(function () {
+                $("#under").slideDown("slow");
+                $("#diabetes").mouseleave(function () {
+                    $("#under").slideUp("slow");
+                });
+            });
+        });
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            $("#front").click(function () {
+                $("#ui").slideDown("slow");
+                $("#front").click(function () {
+                    $("#ui").slideUp("slow");
+                });
+            });
+        });
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            $("#side").click(function () {
+                $("#open").slideDown("slow");
+                $("#side").click(function () {
+                    $("#open").slideUp("slow");
+                });
+            });
+        });
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            $("#back").click(function () {
+                $("#hide").slideDown("slow");
+                $("#back").click(function () {
+                    $("#hide").slideUp("slow");
+                });
+            });
+        });
+    </script>
+
+
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Dexter</title>
+</head>
+
+<style>
+    .act {
+        display: inline;
+        flex-direction: column;
+        color: whitesmoke;
+        font-size: 28px;
+        background-color: black;
+        padding: 18px;
+    }
+
+    .act:hover {
+        font-family: "Comic Sans MS, Comic Sans, cursive";
+        color: whitesmoke;
+        background-color: rgb(255, 20, 39);
+    }
+
+
+    .centerline {
+        font-family: "Comic Sans MS, Comic Sans, cursive";
+        font-size: 53px;
+        text-align: center;
+        color: rgb(43, 43, 43);
+        padding-top: 240px;
+    }
+
+
+    .button {
+        border: none;
+        color: whitesmoke;
+        padding: 16px 32px;
+        text-align: center;
+        display: inline-block;
+        margin: 4px 2px;
+        font-size: 20px;
+        cursor: pointer;
+        background-color: rgba(255, 14, 26, 0.914);
+    }
+
+    #image {
+        height: 87vh;
+        background-image: url(dexterimg.jpg);
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    .column {
+        float: left;
+        width: 25%;
+        color: rgb(97, 97, 97);
+        font-family: "Comic Sans MS, Comic Sans, cursive";
+    }
+
+    .row::after {
+        clear: both;
+        display: table;
+    }
+
+    h1 {
+        font-size: 40px;
+        font-family: American Typewriter, serif;
+        text-align: center;
+    }
+
+    .one {
+        padding: 20px;
+
+    }
+
+    #gencare {
+        margin-left: 43px;
+        margin-top: 50px;
+        height: 375px;
+        width: 280px;
+        background-image: url(image1.jpg);
+    }
+
+    .two {
+        padding: 20px;
+    }
+
+    #dental {
+        margin-left: 343px;
+        margin-top: -376px;
+        height: 375px;
+        width: 280px;
+        background-image: url(image2.jpg);
+    }
+
+    .third {
+        padding: 20px;
+    }
+
+    #neuro {
+        margin-left: 643px;
+        margin-top: -376px;
+        height: 375px;
+        width: 280px;
+        background-image: url(image3.jpg);
+    }
+
+    .four {
+        padding: 20px;
+    }
+
+    #diabetes {
+        margin-left: 943px;
+        margin-top: -376px;
+        height: 375px;
+        width: 280px;
+        background-image: url(image4.jpg);
+    }
+
+
+
+    #press,
+    #box {
+        width: 280px;
+        height: 375px;
+        background-color: rgb(241, 51, 51);
+        box-sizing: border-box;
+        text-align: center;
+        align-items: center;
+        color: lavender;
+        font-size: 30px;
+        font-weight: bold;
+        font-family: "Comic Sans MS, Comic Sans, cursive";
+        padding: 60px;
+    }
+
+    #press {
+        padding: 50px;
+        display: none;
+        margin: 0 auto;
+    }
+
+    #nxt,
+    #bx {
+        width: 280px;
+        height: 375px;
+        background-color: rgb(241, 51, 51);
+        box-sizing: border-box;
+        text-align: center;
+        align-items: center;
+        color: lavender;
+        font-size: 30px;
+        font-weight: bold;
+        font-family: "Comic Sans MS, Comic Sans, cursive";
+        padding: 60px;
+    }
+
+    #bx {
+        padding: 50px;
+        display: none;
+        margin: 0 auto;
+    }
+
+    #mid,
+    #emt {
+        width: 280px;
+        height: 375px;
+        background-color: rgb(241, 51, 51);
+        box-sizing: border-box;
+        text-align: center;
+        color: lavender;
+        font-size: 30px;
+        font-weight: bold;
+        font-family: "Comic Sans MS, Comic Sans, cursive";
+        padding: 60px;
+    }
+
+    #emt {
+        padding: 50px;
+        display: none;
+        margin: 0 auto;
+    }
+
+
+    #under,
+    #low {
+        width: 280px;
+        height: 375px;
+        background-color: rgb(241, 51, 51);
+        box-sizing: border-box;
+        text-align: center;
+        color: lavender;
+        font-size: 30px;
+        font-weight: bold;
+        font-family: "Comic Sans MS, Comic Sans, cursive";
+        padding: 60px;
+    }
+
+    #low {
+        padding: 50px;
+        display: none;
+        margin: 0 auto;
+    }
+
+    h1 {
+        font-size: 40px;
+        font-family: American Typewriter, serif;
+        text-align: center;
+    }
+
+    .rework {
+        font-size: 23px;
+        font-weight: lighter;
+        font-family: "Comic Sans MS, Comic Sans, cursive";
+        text-align: left;
+        flex-wrap: wrap;
+        justify-content: left;
+        padding: 43px;
+    }
+
+    .pass {
+        font-size: 23px;
+        font-weight: lighter;
+        font-family: "Comic Sans MS, Comic Sans, cursive";
+        text-align: left;
+        flex-wrap: wrap;
+        justify-content: left;
+        padding: 43px;
+    }
+
+
+    .a {
+        padding: 50px;
+    }
+
+    #front {
+        border: 1px solid skyblue;
+        font-size: 30px;
+        font-family: "American Typewriter, serif";
+        background-color: powderblue;
+        text-align: left;
+        align-items: center;
+        margin-top: -600px;
+        margin-left: 600px;
+    }
+
+    .b {
+        padding: 50px;
+    }
+
+    #side {
+        border: 1px solid skyblue;
+        font-size: 30px;
+        font-family: "American Typewriter, serif";
+        background-color: powderblue;
+        text-align: left;
+        align-items: center;
+        margin-left: 600px;
+        margin-top: 10px;
+    }
+
+    .c {
+        padding: 50px;
+    }
+
+    #back {
+        border: 1px solid skyblue;
+        font-size: 30px;
+        font-family: "American Typewriter, serif";
+        background-color: powderblue;
+        text-align: left;
+        align-items: center;
+        margin-left: 600px;
+        margin-top: 10px;
+    }
+
+    #ui,#ux {
+        margin: 10px;
+        text-align: center;
+        font-size: 15px;
+        font-weight: bold;
+        font-family: "Comic Sans MS, Comic Sans, cursive";
+    }
+
+    #ux {
+        background-color: aquamarine;
+        padding: 10px;
+    }
+
+    #open,#close {
+        margin: 10px;
+        text-align: center;
+        font-size: 15px;
+        font-weight: bold;
+        font-family: "Comic Sans MS, Comic Sans, cursive";
+    }
+
+    #close {
+        background-color: aquamarine;
+        padding: 10px;
+    }
+
+    #hide,#seek {
+        margin: 10px;
+        text-align: center;
+        font-size: 15px;
+        font-weight: bold;
+        font-family: "Comic Sans MS, Comic Sans, cursive";
+    }
+
+    #seek {
+        background-color: aquamarine;
+        padding: 10px;
+    }
+
+
+    .bottom {
+        color: rgba(39, 39, 39, 0.938);
+        font-size: 25px;
+        font-family: "Comic Sans MS, Comic Sans, cursive";
+        font-weight: bold;
+        background-color: rgb(241, 51, 51);
+        padding: 50px;
+    }
+
+    .grnd {
+        color: lavender;
+        font-size: 25px;
+        font-family: "Comic Sans MS, Comic Sans, cursive";
+        font-weight: lighter;
+        background-color: rgb(241, 51, 51);
+        padding: 40px;
+    }
+
+
+    #line {
+        display: flex;
+        
+    }
+</style>
+
+<body>
+
+    <div id="image">
+
+
+        <img src="Short.jpg">
+
+
+        <div class="act">
+            Home
+        </div>
+
+
+        <div class="act">
+            About
+        </div>
+
+
+        <div class="act">
+            Service
+        </div>
+
+
+        <div class="act">
+            Download Profile
+        </div>
+
+
+        <div class="act">
+            Gallery
+        </div>
+
+
+        <div class="act">
+            Blog
+        </div>
+
+        <div class="act">
+            Contact
+        </div>
+
+
+        <div class="centerline">Welcome to Dexter<br>Enlightening lives!!!</div>
+
+
+        <div style="padding-left: 550px;padding-top:20px"><span class="button">Showmore</span> </div>
+
+
+    </div>
+
+    <div class="row">
+        <div class="column">
+            <img src="iconic1.jpg" style="width: 100px;">
+            <h4>Download Price List</h4>
+            <h4>Pricelists are updated time 2time<br>Pleasere-confirm rates withour<br>Management</h4>
+        </div>
+        <div class="column">
+            <img src="iconic2.jpg" style="width:100px;">
+            <h4>Eco Friendly</h4>
+            <h4>Wemanufacture only EcoFriendly<br>products all our processes are<br>designed to be environmental
+                friendly.</h4>
+        </div>
+        <div class="column">
+            <img src="iconic3.jpg" style="width:100px;">
+            <h4>Dex Chat</h4>
+            <h4>24/7 Online Support for our customer<br>sufistication clear your doubts and<br>queries with us welcome
+                to DexChat</h4>
+        </div>
+        <div class="column">
+            <img src="iconic4.jpg" style="width: 100px;">
+            <h4>Best Quality</h4>
+            <h4>Dexter manufactures allproducts<br>using first
+                graderawmaterialand<br>adheringtointernationalprocessandstandards.</h4>
+        </div>
+    </div>
+
+    <hr>
+    <h1>Dexter Care</h1>
+    <hr>
+
+
+    <div id="gencare">
+        <div id="press">General Care Keeps you Healthy</div>
+    </div>
+
+
+
+    <div id="dental">
+        <div id="nxt">Dental Care Always makes you Smile</div>
+    </div>
+
+
+
+    <div id="neuro">
+        <div id="mid">Neuro Care Keep your reflex active</div>
+    </div>
+
+
+    <div id="diabetes">
+        <div id="under">Diabetic Care your complete dieticians</div>
+    </div>
+
+
+    <hr>
+    <h1>Welcome to Dexter</h1>
+    <hr>
+
+
+
+    <div class="rework">
+        Dexter for private limited, established in 2009, is on,<br>
+        its path to become one of the leading manufactures<br>
+        in the medical industry, which produces<br>
+        both surgical products and<br>
+        allopathic medicine Dexter manufactures all products<br>
+        using first grade raw material and<br>
+        adhering to international process and standards<br>
+        The company focuses on providing high<br>
+        quality, appropriately priced products to its customers<br>
+        and supports all these with dedicated<br>
+        customer service
+    </div>
+
+    <div class="pass">
+        Dexter has a goodnetwork with national and international<br>
+        traders and distributors. This aspect ensures availability<br>
+        ofdexterproducts in the globalmarket.Team dexter focuses<br>
+        on social responsibility through a sophisticated treatment<br>
+        usinglatest technology It aims to create awareness among<br>
+        about medical hygiene.Dexter is prompt and perfect<br>
+        moves with time management.
+    </div>
+
+
+   
+
+
+
+
+    <div id="front">We are Hiring
+        <div id="ui">We are looking for experienced marketing executives, Medical Representatives,<br>Marketing
+            Managers, Account Executives, Collection Executives, Purchase<br>Assistance, HR etc.,. Interested candidates
+            Mail your updated resume with<br>photograph to hr@dexter.co.in and Cc attached to dexterfpl@gmail.com</div>
+    </div>
+
+
+
+
+    <div id="side">PCD Franchise
+        <div id="open">Franchise enquiries are welcome.<br>Available Franchise with monopoly rights Town Wise / district
+            wise / State Wise.<br>With Highly Competitive rates, Attractive Offers, Loyalty Points, Effective
+            marketing<br>tools, Unique promotional materials, Doctors special gifts and complements.<br>Also we impart
+            product training to medical reps.<br>Send your enquiries to dexterfpl@live.com and mark Cc to
+            pcd@dexter.co.in</div>
+    </div>
+
+
+
+    <div id="back">Our CSR Activities
+        <div id="hide">Donate blood when you are alive and Donate eyes when you are not.</div>
+    </div>
+
+
+
+
+
+
+<div style="margin: 60vh; min-width: 100vw;"></div>
+
+
+
+    <div id="line">
+
+        <div class="bottom">
+            About Us
+        </div>
+
+
+
+        <div class="bottom">
+            Blog
+        </div>
+
+
+
+        <div class="bottom">
+            Contact Us
+        </div>
+
+        <div class="grnd" style="padding-left:30vw ;">
+            © Copyright 2024 DEXTER.<br>Designed by- a1ideaz
+        </div>
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
